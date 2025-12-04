@@ -2,6 +2,8 @@
  * Lógica para Euclides.html
  */
 
+
+
 function mcdEuclidesVerbose(a, b) {
     let pasos = [];
     let mayor = Math.max(a, b);
@@ -12,7 +14,6 @@ function mcdEuclidesVerbose(a, b) {
         const cociente = Math.floor(mayor / menor);
         const resto = modulo(mayor, menor);
         pasos.push(`Paso ${i}: ${mayor} = ${menor} × ${cociente} + ${resto}`);
-        
         mayor = menor;
         menor = resto;
         i++;
