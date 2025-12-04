@@ -3,6 +3,18 @@
  * Funciones matemáticas compartidas
  */
 
+//modulo
+function modulo(a, b) {
+    if (b === 0) {
+        throw new Error("No se puede dividir entre cero");
+    }
+    
+    const cociente = Math.floor(a / b);
+    const residuo = a - (b * cociente);
+    
+    return residuo;
+}
+
 // 1. Algoritmo de la División (Retorna cociente y residuo)
 function divAlgoritmo(a, b) {
     if (b <= 0) return null;
@@ -31,7 +43,7 @@ function mcd(a, b) {
     b = Math.abs(b);
     while (b !== 0) {
         let temp = b;
-        b = a % b;
+        b = modulo(a, b);
         a = temp;
     }
     return a;
@@ -42,10 +54,10 @@ function mcd(a, b) {
 function esPrimo(n) {
     if (n <= 1) return false;
     if (n <= 3) return true;
-    if (n % 2 === 0 || n % 3 === 0) return false;
+    if (modulo(n, 2) === 0 || modulo(n, 3) === 0) return false;
 
     for (let i = 5; i * i <= n; i += 6) {
-        if (n % i === 0 || n % (i + 2) === 0) {
+        if (modulo(n, i) === 0 || modulo(n, (i + 2)) === 0) {
             return false;
         }
     }

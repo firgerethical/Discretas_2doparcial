@@ -12,7 +12,7 @@ function mcdEuclidesVerbose(a, b) {
 
     while (menor !== 0) {
         const cociente = Math.floor(mayor / menor);
-        const resto = mayor % menor;
+        const resto = modulo(mayor, menor);
         pasos.push(`Paso ${i}: ${mayor} = ${menor} × ${cociente} + ${resto}`);
         mayor = menor;
         menor = resto;
