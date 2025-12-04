@@ -1,4 +1,4 @@
-/**
+/* 
  * Lógica para Dio.html (Ecuaciones Diofánticas)
  * Dependencias: js/core.js (divAlgoritmo)
  */
@@ -34,7 +34,7 @@ function diofantica(a, b, c) {
     let s = bezoutRes.s;
     let t = bezoutRes.t;
 
-    if (c % d !== 0) {
+    if (modulo(c, d) !== 0) {
         return { 
             tieneSolucion: false, 
             mcd: d,

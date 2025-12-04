@@ -1,3 +1,4 @@
+
 /**
  * Lógica para Bezout.html
  * Dependencias: js/core.js (para divAlgoritmo)
@@ -56,7 +57,7 @@ function calcularBezout() {
         html += '<div style="overflow-x:auto; margin-top:20px;"><table style="width:100%; text-align:center; border-collapse: collapse;">';
         html += '<thead style="background:var(--primary-color); color:white;"><tr><th>q</th><th>r</th><th>s</th><th>t</th></tr></thead><tbody>';
         resultado.tabla.forEach((row, i) => {
-            html += `<tr style="background:${i%2===0?'#f9f9f9':'white'}"><td>${row.q}</td><td>${row.r}</td><td>${row.s}</td><td>${row.t}</td></tr>`;
+            html += `<tr style="background:${modulo(i, 2)===0?'#f9f9f9':'white'}"><td>${row.q}</td><td>${row.r}</td><td>${row.s}</td><td>${row.t}</td></tr>`;
         });
         html += '</tbody></table></div>';
     }
