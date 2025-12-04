@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora MCM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="tema-rosa">
+    <div class="container">
+        <h1>🔢 Calculadora de MCM</h1>
+        <p class="subtitle">Mínimo Común Múltiplo</p>
+
+        <div style="text-align:center; margin-bottom:20px;">
+            <label>¿Cuántos números?</label>
+            <div style="display:flex; justify-content:center; gap:10px; margin-top:10px;">
+                <button onclick="cambiarCantidad(2)" style="width:auto; padding:8px 15px; font-size:14px;">2</button>
+                <button onclick="cambiarCantidad(3)" style="width:auto; padding:8px 15px; font-size:14px;">3</button>
+                <button onclick="cambiarCantidad(4)" style="width:auto; padding:8px 15px; font-size:14px;">4</button>
+            </div>
+        </div>
+
+        <div id="inputsContainer" class="inputs-grid" style="grid-template-columns: 1fr;">
+        </div>
+
+        <button onclick="calcularMCM()">Calcular MCM</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script src="js/core.js"></script>
+    <script src="js/mcm.js"></script>
+</body>
+</html>

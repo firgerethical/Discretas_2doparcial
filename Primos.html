@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Primos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="tema-primos">
+    <div class="container">
+        <h1>🔍 Números Primos</h1>
+        <p class="subtitle">Verificador rápido</p>
+
+        <div class="input-group">
+            <label for="numero">Ingresa un número:</label>
+            <input type="number" id="numero" placeholder="Ej: 17" min="1">
+        </div>
+
+        <button onclick="verificarPrimo()">Verificar</button>
+        <div id="resultado"></div>
+        <div class="info-box">
+            <h3>💡 Definición</h3>
+            <p>Un número primo solo es divisible por 1 y por sí mismo.</p>
+        </div>
+    </div>
+
+    <script src="js/core.js"></script>
+    <script src="js/primos.js"></script>
+</body>
+</html>

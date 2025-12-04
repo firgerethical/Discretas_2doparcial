@@ -1,0 +1,233 @@
+/* =========================================
+   ESTILOS GENERALES (Reset y Layout)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* El fondo se define por las clases de tema más abajo */
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    padding: 40px;
+    max-width: 800px; /* Ancho estándar cómodo */
+    width: 100%;
+}
+
+/* =========================================
+   TIPOGRAFÍA
+   ========================================= */
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2em;
+    /* El color se define en el tema */
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.95em;
+}
+
+/* =========================================
+   FORMULARIOS E INPUTS
+   ========================================= */
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+input[type="number"], 
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    /* El color del borde se define en el tema */
+}
+
+/* Checkboxes */
+.checkbox-group {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox-group input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+button {
+    width: 100%;
+    padding: 15px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* El fondo se define en el tema */
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   CAJAS DE RESULTADO E INFORMACIÓN
+   ========================================= */
+.resultado {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 0.5s;
+    background: #f8f9fa; /* Fondo default */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.info-box {
+    background: #e3f2fd;
+    border-left: 4px solid #2196F3;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.info-box h3 { color: #2196F3; margin-bottom: 8px; }
+.info-box p { color: #555; line-height: 1.5; }
+
+.error {
+    color: #e74c3c;
+    background: #fee;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Estilos para pasos de algoritmos */
+.paso {
+    padding: 12px;
+    margin: 8px 0;
+    background: #f0f0f0;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    border-left: 3px solid #ccc;
+}
+
+/* =========================================
+   TEMAS (COLORES ESPECÍFICOS)
+   ========================================= */
+
+/* Tema: Primos (Verde) */
+.tema-primos {
+    --primary-color: #11998e;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+/* Tema: MCM / Bezout (Rosa/Naranja) */
+.tema-rosa {
+    --primary-color: #f5576c;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+.tema-bezout {
+    --primary-color: #fa709a;
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+/* Tema: División / Euclides (Azul/Morado) */
+.tema-azul {
+    --primary-color: #667eea;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Tema: Diofánticas (Cyan/Azul) */
+.tema-dio {
+    --primary-color: #4facfe;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Tema: Cambio Base (Teal/Rosa) */
+.tema-base {
+    --primary-color: #00b4db;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+/* Aplicación de variables CSS a elementos */
+body[class*="tema-"] h1,
+body[class*="tema-"] .resultado h2,
+body[class*="tema-"] .valor-box .numero {
+    color: var(--primary-color);
+}
+
+body[class*="tema-"] button,
+body[class*="tema-"] .mcm-final,
+body[class*="tema-"] .resultado-principal {
+    background: var(--primary-color); /* Fallback */
+    background: linear-gradient(135deg, var(--primary-color), #ccc); /* Se sobreescribe por el bg del body en JS si se quisiera, pero esto basta */
+}
+/* Re-aplicar gradientes específicos a botones si es necesario */
+.tema-primos button { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+.tema-rosa button { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.tema-bezout button { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+.tema-azul button { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.tema-dio button { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.tema-base button { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+
+.tema-primos input:focus { border-color: #11998e; }
+.tema-rosa input:focus { border-color: #f5576c; }
+.tema-bezout input:focus { border-color: #fa709a; }
+.tema-azul input:focus { border-color: #667eea; }
+.tema-dio input:focus { border-color: #4facfe; }
+.tema-base input:focus { border-color: #00b4db; }

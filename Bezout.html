@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identidad de Bézout</title>
+    <!-- 1. Enlazamos el CSS unificado -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<!-- 2. Asignamos la clase del tema correspondiente -->
+<body class="tema-bezout">
+    <div class="container">
+        <h1>🔐 Identidad de Bézout</h1>
+        <p class="subtitle">Algoritmo de Euclides Extendido</p>
+
+        <div class="resultado-principal" style="margin-bottom: 20px;">
+            a·s + b·t = MCD(a, b)
+        </div>
+
+        <div class="inputs-grid">
+            <div class="input-group">
+                <label for="num1">Primer número (a):</label>
+                <input type="number" id="num1" placeholder="Ej: 240" value="240">
+            </div>
+            <div class="input-group">
+                <label for="num2">Segundo número (b):</label>
+                <input type="number" id="num2" placeholder="Ej: 46" value="46">
+            </div>
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="mostrarTabla" checked>
+            <label for="mostrarTabla">Mostrar tabla de iteraciones</label>
+        </div>
+
+        <button onclick="calcularBezout()">Calcular Coeficientes</button>
+
+        <div id="resultado"></div>
+
+        <div class="info-box">
+            <h3>💡 ¿Qué es la Identidad de Bézout?</h3>
+            <p>Es una representación lineal del máximo común divisor.</p>
+        </div>
+    </div>
+
+    <!-- 3. Enlazamos primero las utilidades (core) y luego la lógica específica -->
+    <script src="js/core.js"></script>
+    <script src="js/bezout.js"></script>
+</body>
+</html>

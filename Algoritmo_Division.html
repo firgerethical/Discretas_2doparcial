@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo de la División</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="tema-azul">
+    <div class="container">
+        <h1>📐 Algoritmo de la División</h1>
+        <p class="subtitle">Encuentra cociente y residuo</p>
+
+        <div class="resultado-principal" style="margin-bottom:25px; font-size:1.2em;">
+            a = b × q + r  (0 ≤ r < b)
+        </div>
+
+        <div class="inputs-grid">
+            <div class="input-group">
+                <label for="dividendo">Dividendo (a):</label>
+                <input type="number" id="dividendo" placeholder="Ej: 25" value="25">
+            </div>
+            <div class="input-group">
+                <label for="divisor">Divisor (b):</label>
+                <input type="number" id="divisor" placeholder="Ej: 7" value="7" min="1">
+            </div>
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="mostrarProceso" checked>
+            <label for="mostrarProceso">Mostrar proceso paso a paso</label>
+        </div>
+
+        <button onclick="calcularDivision()">Calcular División</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script src="js/core.js"></script>
+    <script src="js/algoritmo_division.js"></script>
+</body>
+</html>

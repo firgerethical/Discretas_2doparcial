@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecuaciones Diofánticas Lineales</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="tema-dio">
+    <div class="container">
+        <h1>Ecuaciones Diofánticas</h1>
+        <p class="subtitle">Encuentra soluciones enteras para ax + by = c</p>
+
+        <div class="resultado-principal" id="ecuacionDisplay" style="margin-bottom: 25px;">
+            ax + by = c
+        </div>
+
+        <div class="inputs-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="input-group">
+                <label for="coefA">Coeficiente a:</label>
+                <input type="number" id="coefA" placeholder="Ej: 6" value="6">
+            </div>
+            <div class="input-group">
+                <label for="coefB">Coeficiente b:</label>
+                <input type="number" id="coefB" placeholder="Ej: 9" value="9">
+            </div>
+            <div class="input-group">
+                <label for="coefC">Término c:</label>
+                <input type="number" id="coefC" placeholder="Ej: 15" value="15">
+            </div>
+        </div>
+
+        <button onclick="resolverDiofantica()">Resolver Ecuación</button>
+
+        <div id="resultado"></div>
+
+        <div class="info-box">
+            <h3>¿Qué es una Ecuación Diofántica Lineal?</h3>
+            <p>Es una ecuación de la forma <strong>ax + by = c</strong> donde buscamos soluciones enteras.</p>
+            <p>Tiene solución si y solo si MCD(a, b) divide a c.</p>
+        </div>
+    </div>
+
+    <script src="js/core.js"></script>
+    <script src="js/dio.js"></script>
+</body>
+</html>

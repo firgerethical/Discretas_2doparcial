@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Matemáticas Discretas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .menu-button {
+            height: 100px; /* Botones más altos para el menú */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.1em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            text-decoration: none; /* Porque usaremos <a> para navegar mejor */
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        .menu-button:hover {
+            transform: translateY(-5px);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="tema-azul">
+    <div class="container">
+        <h1>🔢 Matemáticas Discretas</h1>
+        <p class="subtitle">Selecciona una herramienta</p>
+        
+        <div class="menu-grid">
+            <a href="Primos.html" class="menu-button" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+                Números Primos
+            </a>
+            <a href="Algoritmo_Division.html" class="menu-button">
+                Algoritmo de División
+            </a>
+            <a href="Euclides.html" class="menu-button">
+                Algoritmo de Euclides
+            </a>
+            <a href="Bezout.html" class="menu-button" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                Identidad de Bézout
+            </a>
+            <a href="Mcm.html" class="menu-button" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                MCM
+            </a>
+            <a href="Dio.html" class="menu-button" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                Ecuaciones Diofánticas
+            </a>
+            <a href="Cambio_base.html" class="menu-button" style="background: linear-gradient(135deg, #a8edea, #00b4db); color: #333;">
+                Cambio de Base
+            </a>
+        </div>
+    </div>
+</body>
+</html>
